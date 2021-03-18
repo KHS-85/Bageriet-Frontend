@@ -1,0 +1,58 @@
+.navbar_link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .navbar_link:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+  }
+  
+  .navbar_link--active{
+    color: rgb(58, 58, 58);
+  }
+  
+  .navlist{
+    margin-right: 35px;
+    font-size: 17px;
+  }
+  
+  ul{
+    padding-inline-start: 0;
+  }
+  
+  .navbar {
+    background-color: rgb(255, 255, 255);
+    /* margin-bottom: 30px; */
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  
+  /* // Remove ugly outline around Bootstrap 4 navbar button */
+  .navbar-toggler:focus, .navbar-toggler:active {
+    color: rgb(165, 163, 163);
+    outline: none;
+    box-shadow: none;
+  }
+
+  .logo {
+    max-height: 60px;
+    max-width: auto;
+    color: red;
+  }
+
+  .adminlogo {
+    font-size: 50px;
+    color: white;
+  }
+
+  .logoareaadmin a{
+    color: rgb(255, 255, 255) ;
+  }
+
+  .noeffect:hover {
+    text-decoration: none;
+    color: rgb(12, 108, 163);
+  }
+  

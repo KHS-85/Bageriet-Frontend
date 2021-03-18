@@ -1,0 +1,67 @@
+.navbar_link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navbar_link:hover {
+  text-decoration: none;
+  color: rgb(253, 211, 211)
+}
+
+.navbar_link--active {
+  color: rgb(253, 211, 211)
+}
+
+.navlist {
+  margin-right: 35px;
+  font-size: 12px;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.navbar {
+  text-transform: uppercase;
+  padding-top: 2%;
+  color: white;
+  background-color: bisque !important;
+  background-image: url("../gfx/navbarbg.jpg");
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar-nav {
+  z-index: 3;
+}
+
+/* // Remove ugly outline around Bootstrap 4 navbar button */
+
+.navbar-toggler:focus, .navbar-toggler:active {
+  color: rgb(165, 163, 163);
+  outline: none;
+  box-shadow: none;
+}
+
+
+.hashlink {
+  text-decoration: none;
+  color: white !important;
+  cursor: default;
+}
+
+.hashlink:hover {
+  text-decoration: none;
+  color: white !important;
+  cursor: default;
+}
+
+.logotitle {
+  padding-right: 7%;
+  margin-bottom: 5%;
+  font-family: Lobster;
+  text-transform: lowercase;
+  cursor: default;
+  user-select: none;
+}
