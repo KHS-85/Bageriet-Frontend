@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // base URL
 const api = {
-    baseUrl: "http://localhost:5033/"
+    baseUrl: "http://andreashg.com:50333/"
 }
 
 
@@ -26,7 +26,7 @@ export const getAllProducts =  () => {
 //Hent alle kategorier
 export const hentAlleKategorier =  () => {
 
-    //http://localhost:5033/kategorier       
+    //http://andreashg.com:50333/kategorier       
     let response =  axios.get(api.baseUrl + "kategorier")
         .then(res => { return res.data })
         .catch(error => {return "error"})
@@ -49,7 +49,7 @@ export const getProduct = (productID) => {
 }
 
 
-//POST -  http://localhost:5033/products/admin
+//POST -  http://andreashg.com:50333/products/admin
 export const opretProdukt = ( nytProdukt ) => {
 
       
@@ -81,7 +81,7 @@ export const editProduct =  ( editProduct, productID ) => {
 export const deleteProduct = (productID) => {
 
 
-    //http://localhost:5033/products/admin/:ID 
+    //http://andreashg.com:50333/products/admin/:ID 
     let response = axios.delete(api.baseUrl + 'produkter/admin/' + productID, {withCredentials: true})   
     .then(res => {return res.data})
     .catch(error => {return "error"})
@@ -162,7 +162,7 @@ export const loginCheck = (  ) =>   {
 
 export const opretIngrediens = ( produktID, ingrediensen ) => {
 
-    // http://localhost:5033/produktingrediens/admin/5f6719c7d1be3e2fd0cb2648
+    // http://andreashg.com:50333/produktingrediens/admin/5f6719c7d1be3e2fd0cb2648
       
     let response = axios.post(api.baseUrl + "produktingrediens/admin/" + produktID , ingrediensen, {withCredentials: true} )
         .then(res => { return res.data })
@@ -176,7 +176,7 @@ export const opretIngrediens = ( produktID, ingrediensen ) => {
 export const sletIngrediens = (produktID, IngrediensId) => {
 
 
-    //http://localhost:5033/produktingrediens/admin/5f6638a41fe7cf67d08a64d8/5f6638be1fe7cf67d08a64db
+    //http://andreashg.com:50333/produktingrediens/admin/5f6638a41fe7cf67d08a64d8/5f6638be1fe7cf67d08a64db
 
     let response = axios.delete(api.baseUrl + 'produktingrediens/admin/' + produktID + "/" + IngrediensId, {withCredentials: true})   
     .then(res => {return res.data})
@@ -193,7 +193,7 @@ export const sletIngrediens = (produktID, IngrediensId) => {
 
 
 
-//POST -  http://localhost:5033/kommentar/admin
+//POST -  http://andreashg.com:50333/kommentar/admin
 export const opretKommentar = ( nyKommentar ) => {
 
       

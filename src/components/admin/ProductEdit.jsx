@@ -88,7 +88,7 @@ const ProductEdit = (props) => {
                                 singleImage={true}
                                 withPreview={true}
                                 required={true}
-                                defaultImages={['http://localhost:5033/images/' + product.image]}
+                                defaultImages={['http://andreashg.com:50333/images/' + product.image]}
                             />
 
                             <br /> <br />

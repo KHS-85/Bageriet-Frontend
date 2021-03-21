@@ -38,9 +38,9 @@ const ProductCreate = () => {
 
     }, [])
 
-    function clearPreview() {
-        document.querySelector('.deleteImage').click();
-    }
+    // function clearPreview() {
+    //     document.querySelector('.deleteImage').click();
+    // }
 
 
 
@@ -61,10 +61,10 @@ const ProductCreate = () => {
 
                 //tøm formular
                 e.target.reset()
-                clearPreview()
+                // clearPreview()
 
             } else {
-                seterror("Der er sket en fejl")
+                setError("Der er sket en fejl")
             }
 
 

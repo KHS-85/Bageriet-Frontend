@@ -4,7 +4,7 @@ import Chevron from '../gfx/chevron.png'
 
 const Footer = () => {
     return (
-        <article className="container-fluid footer pt-4 pb-1">
+        <article className="container-fluid footer pt-4 pb-1 mt-5">
 
             <div className="row">
                 <div className="col-12">

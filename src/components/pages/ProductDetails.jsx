@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import ProfilePic from '../gfx/profile.jpg'
 
@@ -19,12 +19,12 @@ const ProductDetails = (props) => {
     // Sørger for at lave <br/> fra api'et om til rigtige linebreaks
     const [ParsedText, setParsedText] = useState()
 
-    const imagepath = "http://localhost:5033/images/"
+    const imagepath = "http://andreashg.com:50333/images/"
 
 
 
     useEffect(() => {
-        const apiUrl = "http://localhost:5033/produkter/" + produktID;
+        const apiUrl = "http://andreashg.com:50333/produkter/" + produktID;
         fetch(apiUrl)
             .then((res) => {
                 return res.json()
@@ -43,8 +43,8 @@ const ProductDetails = (props) => {
 
     console.log("Produkt:", produkt)
 
-    
-    
+
+
     // Håndter opret ny kommentar
 
     const handleKommentar = e => {
@@ -53,7 +53,7 @@ const ProductDetails = (props) => {
 
         const kommentaren = new FormData(e.target)
 
-        opretKommentar( kommentaren ).then(data => {
+        opretKommentar(kommentaren).then(data => {
 
             if (data) {
 
@@ -96,23 +96,23 @@ const ProductDetails = (props) => {
 
                     <div className="row">
 
-                    {/* Brugerens billede */}
-                    <div className="imagecontainer col-2">
-                        <img className="ProfilePic" src={ProfilePic} alt="ProfilePicture" />
-                    </div>
+                        {/* Brugerens billede */}
+                        <div className="imagecontainer col-2">
+                            <img className="ProfilePic" src={ProfilePic} alt="ProfilePicture" />
+                        </div>
 
-                    {/* Brugerens navn, dato og kommentar */}
-                    <div key={kommentar._id} className="col-10 commentcontainer">
+                        {/* Brugerens navn, dato og kommentar */}
+                        <div key={kommentar._id} className="col-10 commentcontainer">
 
-                    <p className="my-0"> <strong> {kommentar.bruger.fornavn + " " + kommentar.bruger.efternavn} </strong> </p>
-                    <p className="my-0 text-muted">
-                    { new Date( kommentar.oprettet ).toLocaleDateString( 'da-DK', { year: 'numeric', hour: 'numeric', minute: 'numeric', month: 'long', day: 'numeric' } ) }
-                          
-                    </p> <br/>
-                    
-                    <p className="asd">  {kommentar.kommentaren} </p>
+                            <p className="my-0"> <strong> {kommentar.bruger.fornavn + " " + kommentar.bruger.efternavn} </strong> </p>
+                            <p className="my-0 text-muted">
+                                {new Date(kommentar.oprettet).toLocaleDateString('da-DK',
+                                    { year: 'numeric', hour: 'numeric', minute: 'numeric', month: 'long', day: 'numeric' })}
+                            </p> <br />
 
-                    </div>
+                            <p className="asd">  {kommentar.kommentaren} </p>
+
+                        </div>
 
                     </div>
 
@@ -122,6 +122,8 @@ const ProductDetails = (props) => {
     }
 
     return (
+
+        
 
 
         <section>
@@ -192,10 +194,10 @@ const ProductDetails = (props) => {
                                     {/* Form til at oprette kommentar */}
                                     <div className="whitebackground col-12 mt-2 p-0">
                                         <form className="commentform" onSubmit={handleKommentar}>
-                                            <MdEdit className="formIcon"/>
-                                            <input className="kommentarinput" name="kommentaren" required placeholder="Fortæl os hvad du synes..." type="text"/>
+                                            <MdEdit className="formIcon" />
+                                            <input className="kommentarinput" name="kommentaren" required placeholder="Fortæl os hvad du synes..." type="text" />
                                             <input className="hidden" type="text" name="titel" value="titel" />
-                                            <input className="hidden" type="text" name="bruger" value="6053566790714013d43769c0" />
+                                            <input className="hidden" type="text" name="bruger" value="605797336586497cb231e193" />
                                             <input className="hidden" type="text" name="produkt" value={produktID} />
                                             <button type="submit">INDSÆT</button>
                                         </form>

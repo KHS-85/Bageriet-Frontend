@@ -9,7 +9,7 @@ import { MdDeleteForever, MdModeEdit } from 'react-icons/md';
 //API-call 
 import { getAllProducts } from '../helpers/apicall'
 
-const imagepath = "http://localhost:5033/images/"
+const imagepath = "http://andreashg.com:50333/images/"
 
 
 const ProductAdmin = () => {

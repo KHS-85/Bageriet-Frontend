@@ -8,10 +8,10 @@ const Products = () => {
     const { useGlobalState } = createGlobalState(initialState);
 
 
-    const imagepath = "http://localhost:5033/images/"
+    const imagepath = "http://andreashg.com:50333/images/"
 
     useEffect(() => {
-        const apiUrl = "http://localhost:5033/produkter/";
+        const apiUrl = "http://andreashg.com:50333/produkter/";
         fetch(apiUrl)
             .then((res) => res.json())
             .then((products) => {

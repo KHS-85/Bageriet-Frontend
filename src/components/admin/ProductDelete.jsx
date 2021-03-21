@@ -16,7 +16,7 @@ const ProductDelete = (props) => {
 
     const productID = props.match.params.id
 
-    const imagepath = "http://localhost:5033/images/"
+    const imagepath = "http://andreashg.com:50333/images/"
 
     useEffect(() => {
 

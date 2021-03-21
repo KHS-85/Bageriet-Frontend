@@ -5,10 +5,10 @@ const MyProducts = () => {
 
   const [products, setProducts] = useState([]);
 
-  const imagepath = "http://localhost:5033/images/"
+  const imagepath = "http://andreashg.com:50333/images/"
 
   useEffect(() => {
-    const apiUrl = "http://localhost:5033/produkter/antal/8";
+    const apiUrl = "http://andreashg.com:50333/produkter/antal/8";
     fetch(apiUrl)
       .then((res) => res.json())
       .then((products) => {
@@ -17,7 +17,7 @@ const MyProducts = () => {
       });
   }, []);
 
-  const productmap = products.map(product => {
+  const productmap = products.sort( () => .5 - Math.random()).map(product => {
 
     return (
 
